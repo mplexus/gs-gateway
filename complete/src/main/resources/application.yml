@@ -1,2 +1,10 @@
 server:
   port: 9999
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: host_route
+          uri: https://www.noend.com
+          predicates:
+            - Host=**.lalala.org,**.lalaloo.org
